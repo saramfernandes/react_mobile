@@ -1,3 +1,4 @@
+import Slider from '@react-native-community/slider';
 import { Picker } from '@react-native-picker/picker';
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
@@ -6,6 +7,7 @@ import { StyleSheet, Text, View, TextInput } from 'react-native';
 export default function App() {
   const [nome, setNome] = useState<string>('');
   const [idade, setIdade] = useState<number>(0);
+  const [tamanho, setTamanho] = useState<number>(0);
 
   type Sexo = {
     id: number;
@@ -63,6 +65,19 @@ export default function App() {
         ))}
       </Picker>
 
+      <Text style={styles.text}>Ajuste a altura da barra: {tamanho}</Text>
+      <Slider
+        style={styles.slider}
+        minimumValue={0}
+        maximumValue={80}
+        step={1}
+        value={tamanho}
+        onValueChange={setTamanho}
+        minimumTrackTintColor="#1fb28a"
+        maximumTrackTintColor="#d3d3d3"
+        thumbTintColor="#b9e4c9"
+      />
+
     </View>
   );
 }
@@ -95,6 +110,19 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 8,
     backgroundColor: "#fff",
+  },
+   text: {
+    color: "#fff",
+    marginBottom: 20,
+  },
+  slider: {
+    width: 300,
+    height: 40,
+    marginBottom: 20,
+  },
+  bar: {
+    width: 50,
+    backgroundColor: "yellow",
   },
   
 });
