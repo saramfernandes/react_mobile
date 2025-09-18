@@ -59,6 +59,7 @@ export default function HomeScreen() {
           <Text style={styles.buttonText}>Desistiu</Text>
         </TouchableOpacity>
       </View>
+      
 
       <Text style={styles.text}>Jogador: {nome}</Text>
       <Text style={styles.text}>Pontos: {score}</Text>
