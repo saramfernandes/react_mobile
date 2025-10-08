@@ -10,13 +10,14 @@ type Todo = {
 };
 
 export default function TodoScreen() {
+  ////////////////////////////////// esse todo aqui, é o objeto q ta aq em cima e mostra apenas oq vc qer tipo um dto, entendeu Sara?
   const [todos, setTodos] = useState<Todo[]>([]);
   const [newTodo, setNewTodo] = useState("");
 
   // GET
   const fetchTodos = async () => {
     try {
-      const response = await api.get<Todo[]>("/todos?_limit=5");
+      const response = await api.get<Todo[]>("/todos?_limit=10");
       setTodos(response.data);
     } catch (error) {
       console.error("Erro ao carregar todos:", error);
