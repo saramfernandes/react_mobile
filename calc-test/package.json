@@ -1,0 +1,31 @@
+{
+  "name": "calc-test",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "expo": "~54.0.13",
+    "expo-status-bar": "~3.0.8",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-native": "0.81.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^13.3.3",
+    "@types/jest": "29.5.14",
+    "@types/react": "~19.1.0",
+    "jest": "~29.7.0",
+    "jest-expo": "~54.0.12",
+    "react-test-renderer": "^19.1.1",
+    "typescript": "~5.9.2"
+  },
+  "private": true
+}
